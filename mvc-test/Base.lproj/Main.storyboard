@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mvc_test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,70 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-TA-g9I">
+                                <rect key="frame" x="58" y="86" width="260" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="3d6-84-Bn5"/>
+                                    <constraint firstAttribute="height" constant="43" id="IhL-C3-NnH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bobby_300" translatesAutoresizingMaskIntoConstraints="NO" id="i72-df-tO5" customClass="RoundedImageView" customModule="mvc_test" customModuleProvider="target">
+                                <rect key="frame" x="67" y="222" width="240" height="216"/>
+                                <color key="backgroundColor" red="0.086808848568879049" green="1" blue="0.22414990675420643" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="FyG-TD-SXh"/>
+                                    <constraint firstAttribute="height" constant="216" id="VIj-hg-Aek"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a new first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pxZ-JX-v1C">
+                                <rect key="frame" x="67" y="160" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MMT-IT-ufd"/>
+                                    <constraint firstAttribute="width" constant="240" id="sqb-9a-r9E"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea6-iK-SL2">
+                                <rect key="frame" x="146" y="496" width="83" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="mro-iV-Vdp"/>
+                                    <constraint firstAttribute="height" constant="30" id="qa1-oq-xeJ"/>
+                                </constraints>
+                                <state key="normal" title="Rename"/>
+                                <connections>
+                                    <action selector="renamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5r9-1p-CSQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i72-df-tO5" firstAttribute="top" secondItem="9uO-TA-g9I" secondAttribute="bottom" constant="93" id="9GW-EF-o80"/>
+                            <constraint firstItem="9uO-TA-g9I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AkU-e0-ZRd"/>
+                            <constraint firstItem="ea6-iK-SL2" firstAttribute="top" secondItem="i72-df-tO5" secondAttribute="bottom" constant="58" id="QQw-Dv-hnn"/>
+                            <constraint firstItem="ea6-iK-SL2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wx0-GK-Fp7"/>
+                            <constraint firstItem="i72-df-tO5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="apd-Lm-SO8"/>
+                            <constraint firstItem="pxZ-JX-v1C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cK9-oQ-nnT"/>
+                            <constraint firstItem="9uO-TA-g9I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="66" id="ecu-5V-tHk"/>
+                            <constraint firstItem="pxZ-JX-v1C" firstAttribute="top" secondItem="9uO-TA-g9I" secondAttribute="bottom" constant="31" id="u07-M9-JXg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fullName" destination="9uO-TA-g9I" id="t34-3L-9Is"/>
+                        <outlet property="renameField" destination="pxZ-JX-v1C" id="Lr2-n8-diJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bobby_300" width="242" height="300"/>
+    </resources>
 </document>
